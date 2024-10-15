@@ -1,0 +1,390 @@
+body{
+    background-color: #f0f0f0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+.row{
+    margin-top: 10%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #59595a;
+}
+.col-1{
+    height: 100px;
+    width: 100%;
+    padding: 10px 10px 0px 30px;
+    background: url('Images/banner.jpg');
+    background-size:auto;
+    background-position: right;
+    border: 1px solid #bdbdbd;
+    border-bottom:0px ;
+}
+.col-2{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #bdbdbd;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(81, 105, 170);
+}
+form label span{
+    color: red;
+}
+label{
+    display: block;
+}
+.col-3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+#street{
+    height: 20px;
+    margin: 5px 0px;
+}
+#city{
+    height: 20px;
+    margin: 5px 0px;
+    margin-right: 30px;
+}
+#state{
+    margin: 5px 0px;
+}
+.col-4{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#clear{
+    height: 45px;
+    color: white;
+    background: rgb(255, 178, 35);
+    width: 100px;
+    border: none;
+    border-bottom: 5px solid rgb(255, 136, 0);
+    text-transform: uppercase;
+}
+#clear:hover{
+    background: rgb(255, 186, 0);
+}
+#submit{
+    height: 45px;
+    color: white;
+    background: rgb(82, 105, 167);
+    width: 100px;
+    margin-right: 2px;
+    border: none;
+    border-bottom: 5px solid rgb(37, 57, 112);
+    text-transform: uppercase;
+}
+#submit:hover{
+    background: rgb(103, 124, 182);
+}
+#result{
+    margin-top: 10%;
+    width: 100%;
+}
+
+.today{
+    border: 1px solid #bdbdbd;
+    border-bottom: 4px solid #bdbdbd;
+    width: 800px;
+    height: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: white;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.today:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.today_loc{
+    text-transform: capitalize;
+    font-size: 35px;
+    margin: 0;
+}
+.today_row{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.today_colomn{
+    width: 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.today_colomnI{
+    width: 350px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#today_img{
+    width: 140px;
+    height: 140px;
+    align-self: center;
+}
+.today_cast{
+    font-size: 20px;
+    margin: 0;
+    text-transform: capitalize;
+    align-self: center;
+}
+.T_temp{
+    font-size: 140px;
+    margin: 0;
+}
+.today_img2{
+    width: 50px;
+    height: 50px;
+}
+.today_colomn1{
+    width: 100px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.today_lable{
+    text-transform: capitalize;
+}
+
+.week{
+    width: 1200px;
+    color: black;
+    margin: 0 auto;
+    margin-top: 5%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+}
+
+.status_img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    
+}
+
+tr{
+    border: 5px solid  #f0f0f0;;
+}
+th{
+    background: rgb(82, 105, 167);
+    text-emphasis: none;
+    font-weight: 400;
+    text-align: center;
+    height: 50px;
+}
+
+td{
+    text-align: center;
+    background: rgb(255, 255, 255);
+    height: 100px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.td1{
+    width: 50px;
+}
+.td2{
+    width: 150px;
+}
+
+.daily_title{
+    font-size: 50px;
+    text-transform: capitalize;
+    color: black;
+    margin-bottom: 10px;
+   text-align: center;
+}
+
+.daily_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    height: 370px;
+    border: 1px solid #bdbdbd;
+    border-bottom: 4px solid #bdbdbd;
+    background: linear-gradient( 360deg, rgb(51, 65, 102), white);
+    margin: 0 auto;
+}
+.daily_container:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.daily_img{
+    width: 150px;
+    height: 150px;
+}
+.daily_row{
+    width: 500px;
+    height: 150px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.daily_column2{
+    width: 120px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.daily_column1{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    color: rgb(51, 65, 102);
+}
+
+.daily_column{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+.daily_column p{
+    margin: 0;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+p.daily_date{
+    align-self: self-start;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+p.daily_status{
+    align-self: self-start;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+p.daily_temp{
+    align-self: self-start;
+    font-size: 35px;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.daily_info{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.chart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.weather_charts{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 30px;
+}
+img.view_chart{
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.display_charts{
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+.display_chart2{
+
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+}
+.show_chart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+p.backend_error{
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10%;
+    background: rgb(255, 255, 255);
+    border: 1px solid #bdbdbd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+hr#rule{
+    border: none;
+  height: 1px;
+  background: white;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 2%;
+}
+hr#form_rule{
+    border: none;
+    height: 0.5px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 10px;
+    background: #000000;
+}
