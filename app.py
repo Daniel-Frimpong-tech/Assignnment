@@ -24,7 +24,7 @@ def weather():
         if response.status_code == 200:
             return jsonify(data)
         else:
-            return "Error fetching data"
+            return "Tommorrow.io API hit limit"
     else:
         return "Please provide a location"
     

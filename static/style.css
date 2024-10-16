@@ -158,7 +158,7 @@ label{
     align-self: center;
 }
 .T_temp{
-    font-size: 140px;
+    font-size: 120px;
     margin: 0;
 }
 .today_img2{
@@ -339,6 +339,7 @@ img.view_chart{
     margin-left: auto;
     margin-right: auto;
     display: block;
+    cursor: pointer;
 }
 
 .display_charts{

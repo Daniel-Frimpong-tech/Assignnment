@@ -117,6 +117,20 @@ function cleardata(){
     document.getElementById('state').value = '';
     document.getElementById('auto_detect').checked = false;
     document.getElementById('result').innerHTML = '';
+    appState ={
+        dataloc: '',
+        todayWeatherData: {},
+        weekWeatherData: [],
+        weather_loc: '',
+        icon: '',
+        iconText:'',
+        weather_Code: '',
+        eachday: [],
+        eachdayicon: [],
+        eachdayiconText: [],
+        eachdaytime: [],
+        meteoData: [],
+    };
 }
 
 function getWeather(appState){
@@ -169,7 +183,7 @@ function displayWeather(appState){
     
         weather_loc = appState.weather_loc;
         results = document.getElementById('result');
-        temp = Math.round(appState.todayWeatherData.temperature).toFixed(1) + '°';
+        temp = appState.todayWeatherData.temperature + '°';
     
         let humidity = appState.todayWeatherData.humidity + '%';
         let windSpeed = appState.todayWeatherData.windSpeed + 'mph';
@@ -230,9 +244,10 @@ function displayWeather(appState){
        
     
         results.innerHTML = weekResult
-        }, 3000);
+        }, 2000);
         
         setTimeout(() => {
+            
             let weekly_weather = appState.weekWeatherData;
             let dataResult = document.getElementById('week');
     
@@ -275,9 +290,9 @@ function displayWeather(appState){
             for(let i=0; i<appState.eachday.length; i++){
                 document.getElementById(`row_${i}`).onclick = function() {weather_details(i, appState)};
             }
-        }, 3000);
+        }, 2000);
         }
-    }, 3000);
+    }, 2000);
    
 
 }
@@ -365,7 +380,7 @@ function weatherDisplayIcon(weatherCode){
 
 
 function weather_details(id,appState){
-setTimeout(() => {
+
 
     let time = appState.eachdaytime;
     let eachday = appState.eachday[id];
@@ -373,10 +388,10 @@ setTimeout(() => {
     let status = appState.eachdayiconText[id];
     let icon =  appState.eachdayicon[id];
     let date = new Date(time[id]).toLocaleString('default', {weekday: 'long',  day: 'numeric',month: 'short', year: 'numeric'});
-    let tempHigh = Math.round(eachday.temperatureMax).toFixed(2);
-    let tempLow = Math.round(eachday.temperatureMin).toFixed(2);
-    let precipitation = eachday.precipitationProbability;
-    let rainChance = eachday.precipitationType + '%';
+    let tempHigh = eachday.temperatureMax.toFixed(2);
+    let tempLow = eachday.temperatureMin.toFixed(2);
+    let precipitation = eachday.precipitationType;
+    let rainChance = eachday.precipitationProbability + '%';
     let windSpeed = eachday.windSpeed + 'mph';
     let humidity = eachday.humidity + '%';
     let visibility = eachday.visibility + 'mi';
@@ -386,7 +401,16 @@ setTimeout(() => {
    
     if(precipitation == 0){
         precipitation = 'N/A';
-    }
+    }else if (precipitation == 1){
+        precipitation = 'rain';
+    }else if (precipitation == 2){
+        precipitation = 'snow';
+    }else if (precipitation == 3){
+        precipitation = 'freezing rain';
+    }else if (precipitation == 4){
+        precipitation = 'ice pellets';
+    };  
+
 
     details = `<p class="daily_title"> Daily weather details</p>
    <hr id="rule">
@@ -436,7 +460,6 @@ setTimeout(() => {
         }
        };
 
-}, 2000);
 
 setTimeout(() => {
         
