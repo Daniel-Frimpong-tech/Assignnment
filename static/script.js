@@ -89,7 +89,7 @@ function getGeodata() {
         city = city.replace(/\s/g, '+');
         state = state.replace(/\s/g, '+');
 
-        var url = `https://maps.googleapis.com/maps/api/geocode/json?address=${street},+${city},+${state}&key=AIzaSyAMUx--7BmgcJtwMZWn3pavvZuO9aMlBaA`
+        var url = `https://maps.googleapis.com/maps/api/geocode/json?address=${street},+${city},+${state}&key=#`
 
     if (document.getElementById('auto_detect').checked == true) {
             ipdata();  
